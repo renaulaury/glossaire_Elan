@@ -30,13 +30,13 @@
 
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
 
-    La portée de la superglobale est externe à son script.
+    La portée de la superglobale est externe à son script car elles sont crées automatiquement par le serveur
 
     $_GET : Contient les données envoyés en paramètre d'url (ex : récupérer l'id d'un article dans l'url pour l'afficher)
     $_POST : Contient les données envoyées par le biais d'un formulaire
     $_SESSION : Permet de stocket et de récupérer les données de sessions du user (ex: garder le user connecté d'une page à l'autre)
     $_COOKIE : Contient les cookies (locaux) envoyés par le navigateur du user (ex: se souvenir de sa langue préféré)
-    $_SERVER : Fournit les infos sur le serveur et l'environnement d'exécution (ex : connaitre l'adresse ip du user)
+    $_ENV et $_SERVER : Fournit les infos sur le serveur et l'environnement d'exécution (ex : connaitre l'adresse ip du user)
     $_FILES : Permet de gérer les fichiers envoyés via un formulaire HTML (dl une photo de profil via un formulaire)
     $_REQUEST : Contient les données envoyés par GET, POST, COOKIE, SERVER (ex : accéder aux données d'un form peut importe la méthode get ou post)
 
