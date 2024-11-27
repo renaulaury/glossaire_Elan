@@ -14,7 +14,7 @@
 
 ## Général
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
-    VS code et Laragon / MAMP
+    VS code et Laragon / XAMP
 
 2.	Qu’est-ce qu’un algorithme ?  
     C'est une suite d'instructions organisées (séquentiel (exécution d'instructions) et procédurale (exécution de fonctions))
@@ -277,7 +277,6 @@
     Création d'une nouvelle classe (enfant/sous classe) qui hérité des propriétés et des méthodes de son parent
     Concept clé : l'héritage
 
-    //Concept et suivant à revoir
     ex : class ElectricCar extends Car {
     private $_batteryCapacity_;
     }
@@ -397,8 +396,27 @@ h.	Concaténer 2 chaînes de caractères
 ## Sécurité
 94.	Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
 95.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
+    XSS : Cross Site Scripting : Injection de code malveillant au sein d'un formulaire.
+
+    Mise en place de filtres : 
+        FILTER_SANITIZE_FULL_SPECIAL_CHARS -> supprime les strings
+        FILTER_VALIDATE_FLOAT -> valide si float
+        FILTER_FLAG_ALLOW_FRACTION -> permet "." ou "," au float
+        FILTER_VALIDATE_INT : valide si int != 0
+
 96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
+    CSRF : Cross Site Request Forgery : Use user pour effectuer une action sans qu'il en ait conscience
+    ex : Réception de mail envoyant le user sur site frauduleux
+
+    Prévention : Génération d'un token
+
 97.	Définir l’attaque par force brute et l’attaque par dictionnaire
+
+    Attaque par force brute : Tester chaque combinaison possible d'un mot de passe
+    Attaque par dico : Hacker va essayer automiquement des mots issus du dictionnaire
+
+    Prévention : Hashage du mot de passe par le biais du regex (expression régulière)
+
 98.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
 99.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
 100. Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
