@@ -106,7 +106,6 @@
     }
     Supprimer un cookie: setcookie() avec date dans le passé
 
-
 13.	Quelle est la différence entre les instructions « require » et « include » en PHP
     require : Utlisé pour un fichier essentiel (ex : config de bibliothéque)        
     include : Utilisé pour un fichier non essentiel (ex: file interface user)
@@ -406,7 +405,7 @@ h.	Concaténer 2 chaînes de caractères
 
 96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
     CSRF : Cross Site Request Forgery : Use user pour effectuer une action sans qu'il en ait conscience
-    ex : Réception de mail envoyant le user sur site frauduleux
+    ex : Réception de mail envoyant le user sur un site frauduleux
 
     Prévention : Génération d'un token
 
