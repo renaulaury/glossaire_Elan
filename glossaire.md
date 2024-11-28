@@ -281,7 +281,7 @@
     }
 
 51.	Définir l’opérateur de résolution de portée
-    Permet d'accèder aux propriétés et méthodes statique ainsi qu'aux constantes de classe
+    Permet d'accèder aux propriétés et méthodes statiques ainsi qu'aux constantes de classe
 
 52.	Définir une méthode / propriété statique
     Méthode : 
@@ -438,11 +438,21 @@ Attaque Man in the Middle : interception de datas sensibles
     Cela permet de gérer les accès utilisateurs.
 
 100. Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
-    Honey pot : 
-    Login throttling
+     Le hachage de mot de passe consiste à camoufler un mot de passe grâce a un algorithme.
+
+     Algorithme SHA-256 va produire un « hash » (code ) de 256 bits précis
+     Algorithme SHA-3 utilise des mécanisme de brouillage très avancés (2015)
+
 101. Qu’est-ce qu’une politique de mots de passe forts ?
+    Permet de rendre un mot de passe quasiment inviolable.
+
 102. Qu’est-ce que l’hameçonnage ?
+     C'est le fait d'être démarché par téléphone, sms ou mail se faisant passer bien souvent pour un organisme public (banque, impôts, caf, etc) afin de récupérer des informations sensibles
+     en utilisant des techniques d'ingenierie sociale.
+
 103. Définir la « validation des entrées »
+     Le développeur doit anticiper tous les comportements d'un utilisateur afin que ce dernier utilise l'application correctement. 
+     ex : n'autoriser que des string dans un nom
 
 ## RGPD
 104. Qu’est-ce que le RGPD ?
@@ -584,32 +594,32 @@ Attaque Man in the Middle : interception de datas sensibles
  
 ## English
 1)	What does JavaScript enable you to do on a website ?
-a.	Add interactive behavior and dynamic content
+**a.	Add interactive behavior and dynamic content**
 b.	Define the layout and design of web pages
 c.	Handle server-side operations
 2)	Which programming language is primarily used for server-side web development ?
-a.	PHP
+**a.	PHP**
 b.	JavaScript
 c.	HTML
 3)	What is the purpose of a web browser ?
-a.	To render and display web pages
+**a.	To render and display web pages**
 b.	To execute serve-side code
 c.	To manage databases
 4)	What is the difference between GET and POST methods in HTTP ?
-a.	GET retrieves data from a server, while POST submits data to a server
+**a.	GET retrieves data from a server, while POST submits data to a server**
 b.	GET submits data to a server, while POST retrieves data from a server
 c.	GET and POST methods are interchangeable
 5)	What is the purpose of version control systems (e.g., Git) in web development ?
-a.	To track changes and manage collaborative development
+**a.	To track changes and manage collaborative development**
 b.	To optimize website loading speed
 c.	To handle server-side scripting
 6)	What is the purpose of a framework in web development ?
-a.	To provide a structured environment for building web applications
+**a.	To provide a structured environment for building web applications**
 b.	To handle network protocols and data transfer
 c.	To create visual designs and layouts for websites
 7)	What does NoSQL stand for ?
 a.	Not Only SQL
-b.	Non-Structured Query Language
+**b.	Non-Structured Query Language**
 c.	New Object-Oriented Language
 8)	Which of the following is a characteristic of NoSQL databases ?
 a.	Strict schema enforcement
