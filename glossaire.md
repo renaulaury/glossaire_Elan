@@ -280,18 +280,51 @@
     private $_batteryCapacity_;
     }
 
-51.	Définir l’opérateur de résolution de portée
-    Permet d'accèder aux propriétés et méthodes statiques ainsi qu'aux constantes de classe
+51.	Définir l’opérateur de résolution de portée ::
+    Permet d'accèder aux propriétés et méthodes statiques ainsi qu'aux constantes de classe.
+    ex dans le cadre d'un héritage
 
 52.	Définir une méthode / propriété statique
-    Méthode : 
+    Méthode appartenant a une classe qui peut être appelée sans créer d'objet de la classe.
+    Souvent appelée avec l'opérateur de résolution de portée.
+
 53.	Définir le polymorphisme en POO
+    Avantages : Flexibilité - Extensibilité - réutilisable
+
+    Permet a des objets de différentes classes d'être traités de manière uniforme.
+        - Par héritage/dyn : Méthode redéfinie dans la classe enfant. 
+          (avec extends on modifie la méthode)
+        - Par interface/inclusion : Lorsque plusieurs classes implémentent une même interface et fournissent leur 
+          propre version des méthodes définies. 
+        - Avec classes abstraites : oblige les classes dérivées d'avoir leur propre implémentation.
+
 54.	Définir une méthode / classe abstraite ?
+    Elle permet de fournir une implémentation partielle d'un comportement commun que les classes dérivées peuvent 
+    compléter ou modifier.
+
 55.	Définir le chaînage de méthodes
+    Permet d'appeler plusieurs méthodes sur un simple objet grâce au retour de return $this (objet courant).
+
 56.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
+    Elle permet de défénir une représentation string de l'objet.
+
 57.	Qu’est-ce qu’un « autoload » ?
+    Permet de charger les classes ou interfaces nécessaires sans avoir besoin d'use require ou include
+    spl_autoload_register(function ($className) {
+    include 'classes/' . $className . '.php';
+});
+
 58.	Comment appelle-t-on en français les « getters » et les « setters » ?
+    Accesseur : Méthode qui permet d'accèder à la valeur d'un attribut pv ou protégé d'une classe
+    Mutateur : Méthode qui permet de modifier ou muter la valeur d'un attribut pv ou protégé d'une classe
+
 59.	Qu’est-ce que la sérialisation en PHP ? 
+    Processus qui permet de convertir une variable (objet, tabl, etc) en une string afin de 
+    stocker : dans un file, bdd
+    transmettre : sur un rzo, (ex api ou session)
+    rétablir : plus tard la variable dans son état d'origine (désérialisation)
+
+    $serializedData = serialize($data);
 
 ## Architecture 
 60.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
