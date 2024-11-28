@@ -34,7 +34,7 @@
 
     $_GET : Contient les données envoyés en paramètre d'url (ex : récupérer l'id d'un article dans l'url pour l'afficher)
     $_POST : Contient les données envoyées par le biais d'un formulaire
-    $_SESSION : Permet de stocket et de récupérer les données de sessions du user (ex: garder le user connecté d'une page à l'autre)
+    $_SESSION : Permet de stocker et de récupérer les données de sessions du user (ex: garder le user connecté d'une page à l'autre)
     $_COOKIE : Contient les cookies (locaux) envoyés par le navigateur du user (ex: se souvenir de sa langue préféré)
     $_ENV et $_SERVER : Fournit les infos sur le serveur et l'environnement d'exécution (ex : connaitre l'adresse ip du user)
     $_FILES : Permet de gérer les fichiers envoyés via un formulaire HTML (dl une photo de profil via un formulaire)
@@ -394,6 +394,11 @@ h.	Concaténer 2 chaînes de caractères
 
 ## Sécurité
 94.	Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
+    Code SQL malveillant afin de manip la BDD (usurpation d'identité) 
+    ex : insertion de " ou ', opérateur OR
+
+    Prévention : bonne gestion des privilèges, requêtes préparées (requêtes paramétrées)
+
 95.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
     XSS : Cross Site Scripting : Injection de code malveillant au sein d'un formulaire.
 
@@ -405,9 +410,9 @@ h.	Concaténer 2 chaînes de caractères
 
 96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
     CSRF : Cross Site Request Forgery : Use user pour effectuer une action sans qu'il en ait conscience
-    ex : Réception de mail envoyant le user sur un site frauduleux
+    ex : Réception de mail envoyant le user admin sur un site frauduleux (ingénierie sociale)
 
-    Prévention : Génération d'un token
+    Prévention : Génération d'un token unique côté serveur permettant de lier l'utilisateur au formualaire
 
 97.	Définir l’attaque par force brute et l’attaque par dictionnaire
 
@@ -417,6 +422,9 @@ h.	Concaténer 2 chaînes de caractères
     Prévention : Hashage du mot de passe par le biais du regex (expression régulière)
 
 98.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
+
+    Attaque Man in the Middle : interception de datas sensibles
+
 99.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
 100. Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
 101. Qu’est-ce qu’une politique de mots de passe forts ?
