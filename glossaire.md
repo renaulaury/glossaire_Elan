@@ -399,6 +399,7 @@ h.	Concaténer 2 chaînes de caractères
 
     Prévention : bonne gestion des privilèges, requêtes préparées (requêtes paramétrées)
 
+
 95.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
     XSS : Cross Site Scripting : Injection de code malveillant au sein d'un formulaire.
 
@@ -423,10 +424,22 @@ h.	Concaténer 2 chaînes de caractères
 
 98.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
 
-    Attaque Man in the Middle : interception de datas sensibles
+Attaque Man in the Middle : interception de datas sensibles 
+    - ARP poisoning : interception sur LAN 
+                    Prévention : tables ARP statiques pour config adresses IP et MAC - Implémenter sytèmes d'intrusion - chiffrer les datas
+
+    - DNS Spoofing : redirection vers sites malveillants
+                    Prévention : implémentation signatures cryptographiques - Mep d'outils de détection et d'analyse rzo
+
+    - DHCP spoofing : détournement du processus de distrib IP
+                    Prévention : protection DHCP sur les switches - Segmenter le rzo avec vlan - config parefeu et ACLs (Access Control Lists)
 
 99.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
+    Cela permet de gérer les accès utilisateurs.
+
 100. Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
+    Honey pot : 
+    Login throttling
 101. Qu’est-ce qu’une politique de mots de passe forts ?
 102. Qu’est-ce que l’hameçonnage ?
 103. Définir la « validation des entrées »
