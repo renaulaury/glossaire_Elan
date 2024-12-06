@@ -327,52 +327,146 @@
     $serializedData = serialize($data);
 
 ## Architecture 
-60.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
+60.	Qu’est-ce que l’architecture client / serveur ? 
+    Modèle de communication dans lequel les rôles sont répartis entre un client qui demande des services/ressources
+    et un serveur qui les fournit. client env requête au serveur qui répond en fonction des données ou traitements qu'il Gère
+
+    Grâce à quel type de requête peut-on interroger le serveur ? Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
+    Requête HTTP (Hypertext Transfert Protocol)
+    Avec S : Sécurisée (fortement recommandée pour SEO, obl pour certains sites)
+
 61.	Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
+    Solution réutilisable à un problème courant dans le développement logiciel afin de résoudre plus facilement 
+    un problème.
+    ex : singleton - factory method - Observer
+    
 62.	Qu’est-ce que l’architecture MVC ?
     Permet de séparer la logique d'une application en 3 blocs
 
 63.	Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
+    Model : Gère les données, la logique métier et l'accès à la BDD
+    View : Présente les données au user sans contenir de logique métier
+    Controller : Interprète les actions du user et update le modèle et la vue en conséquence
+
 64.	Quels sont les avantages de l’architecture MVC ?
+    Séparation des préoccupations : Facilité de la gestion et la maintenance du code. Chaque couche est resp d'une fonction.
+    Facilité de test : Permet de tester la logique métier sans dépendre de l'ui
+    Réutilisation du code
+    Facilité de collab
+    Scalabilité et flexibilité
+
 65.	Existe-t-il des variantes à l’architecture MVC ?
+    MVVM (Model-View-ViewModel) : Use dans appli dyn
+    MVP (Model-View-Presenter) : Gére la logique de présentation
+    MVU (Model-Update-View) : Flux unidirectionnel, état géré par Update.
+
 66.	Qu’est-ce qu’une API ? Définir l’architecture REST
+    Application Programming Interface : Ensemble de protocoles et d'outils qui permet à différentes appli
+    de communiquer entre elles 
+    Representational State Transfert : Style de conception d'api qui utilise les méthodes http pour manipuler
+    les ressources identifiées par des url (CRUD > Post, Get, Put, Delete)
+
+    Avantages : simple, standardisé, évolutif, rapide, haute performance, support de mise en cache
 
 ## Modélisation - Base de données
 67.	Qu’est-ce que la modélisation de données ? Définir la méthode Merise
+    La modélisation de données est une façon d’organiser et de représenter les informations 
+    pour mieux les comprendre et répondre aux besoins métier.
+
+    Merise : méthode de conception de systèmes d'information qui organise les données et les processus grâce 
+    à des modèles pour assurer une bonne compréhension et une gestion efficace (ex MCD - MLD)
+
 68.	Quelles sont les 3 étapes principales de la méthode Merise ? 
-a.	Analyse, conception et réalisation
+**a.Analyse, conception et réalisation**
+        Analyse : étude des besoins + modélisation
+        Conception : MCD -> MLD 
+        Réalisation : Implémenter le modèle physique dans un environnement techniques
+
 b.	Planification, exécution et contrôle
 c.	Création, modification et suppression
+
 69.	Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
+    Représention graphique des données d'un système d'information (entités - attributs - relations)
+
 70.	Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
+    Traduction du MCD en organisant les éléments sous forme de tables, colonnes (attributs), clés
+    primaires et étrangères.
+
 71.	Donner la définition des mots suivants :
-a.	Entité
-b.	Relation
-c.	Cardinalité
-d.	Clé primaire / clé étrangère
+a.	Entité : représente un objet qui a une existence propre possédant des attributs
+b.	Relation : Associations entre plusieurs entités
+c.	Cardinalité : Nb d'occurences possibles entre 2 entités en relation
+d.	Clé primaire / clé étrangère : identifiant de l'entité / identifiant d'une entité étrangère
+
 72.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
+    Elle devient une table d'Associations.
+
 73.	Qu’est-ce qu’une base de données ?
+    Ensemble de données stockées.
+
 74.	Définir les notions suivantes : 
-a.	SQL
-b.	MySQL
-c.	SGBD (donner 2 exemples de SGBD)
-75.	Dans une base de données, les données sont stockées dans des ___. Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___
+a.	SQL (Structured Query Language) : langage de programmation pour manipuler les données de la BDD
+b.	MySQL : c'est un SGBD open sourcé basé sur sql
+c.	SGBD (system de Gestion de BDD) : logiciel permettant de crud une bdd
+         (ex : MongoDB, Oracle, MariaDB PostGre)
+
+75.	Dans une base de données, les données sont stockées dans des **tables**. 
+    Celles-ci sont constituées de lignes appelées **enregistrement** et de colonnes appelées **attributs**.
+
 76.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
+    BDD relationnelle : Elle organise les données en tables interconnectées par des relations utilisantle langage SQL 
+    pour manipuler les données structurées utilisant SQL.
+
+    BDD non relationnelle : Elle stocke les données de manière flexible, souvent sous forme de documents,
+    paires clé-valeur sans imposer de structure rigide et ne nécessite pas SQL.
+
+
 77.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
+    INNER JOIN : données communes a 2 tables
+    LEFT JOIN : enregistrements de la table de gauche et correspondances de la table de droite
+    RIGHT JOIN : enregistrements de la table de droite et correspondances de la table de gauche
+    FULL JOIN : enregistrements des 2 tables avec valeur nulles pour absence de correspondances
+    CROSS JOIN : combine chaque enregistrment de la 1ere table avec tous les enr de la 2e_page
+    SELF JOIN : table jointe à elle-même
+
 78.	A quoi sert une vue dans une base de données ?
+    Permet de simplifier l'accès aux données, restreindre leur visibilité et personnaliser leur présentation.
+    (avec CREATE VIEW)
+
 79.	Qu’est-ce que l’intégrité référentielle dans une base de données ?
+    Permet de garantir la liaison clé étrangère <-> clé primaire
+
 80.	Quelles sont les fonctions d’agrégation en SQL ?
+    SUM() - COUNT() - AVG() - MIN() - MAX() : a utiliser avec GROUP BY
+
 81.	Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
+    Create - Read - Update - Delete 
+
 82.	Quelles sont les clauses qui permettent de :
-a.	Insérer un nouvel enregistrement dans une table
-b.	Modifier un enregistrement dans une table
-c.	Supprimer un enregistrement dans une table
-d.	Supprimer la base de données
-e.	Filtrer les résultats d’une requête SQL
-f.	Trier les résultats d’une requête SELECT
-g.	Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique
-h.	Concaténer 2 chaînes de caractères 
+a.	Insérer un nouvel enregistrement dans une table : **INSERT INTO**
+b.	Modifier un enregistrement dans une table : **UPDATE**
+c.	Supprimer un enregistrement dans une table : **DELETE**
+d.	Supprimer la base de données : **DROP DATABASE**
+e.	Filtrer les résultats d’une requête SQL : **WHERE**
+f.	Trier les résultats d’une requête SELECT : **ORDER BY**
+g.	Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique : **GROUP BY**
+h.	Concaténer 2 chaînes de caractères ; **|| '' ||**
+
 83.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
+    /*Connexion a la BDD*/
+        try 
+        {
+            $bdd = new PDO('mysql:host=localhost;dbname=recettelily;charset=utf8', 
+            'root', 
+            '',
+            [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION], /*Permet d'afficher erreurs clairement*/
+        );
+            
+        }
+        catch (Exception $e)
+        {
+            die('Erreur : ' . $e->getMessage());
+        }
 
 ## Symfony
 84.	Qu’est-ce que Symfony ?
@@ -612,8 +706,20 @@ Attaque Man in the Middle : interception de datas sensibles
         - Won't have this time (n'aura pas cette fois-ci) : Exigences non prises en compte dans le projet actuel
         
 130. A quoi sert la méthodologie MVP ? Citer les caractéristiques clés
+    Minimum Viable Project : Version minimum d'un projet contenant les fonctionnalités de base
+
+    Petit - rapide - peu cher 
+
 131. Qu’est-ce que la planification itérative ?
+     Consiste à diviser un projet en cycles courts, appelés itérations, permettant des ajustements continus 
+     et des améliorations basées sur les retours des utilisateurs à chaque étape.
+
 132. Citer 3 méthodes Agiles dans le cadre d’un projet informatique
+    SCRUM
+    KANBAN
+    Extreme Programming (XP)
+
+
 133. Qu’est-ce qu’une réunion de revue de projet ?
 134. Qu’est-ce qu’un livrable dans un projet ? 
 135. Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
