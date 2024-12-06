@@ -487,7 +487,6 @@ h.	Concaténer 2 chaînes de caractères ; **|| '' ||**
                   le code    
         Sigleton : services ou composants instanciés une seule fois pour économiser mémoire et ressources
 
-
 86.	Quelle est la dernière version en date de Symfony ?
     Version 7.1
 
@@ -715,21 +714,54 @@ Attaque Man in the Middle : interception de datas sensibles
      et des améliorations basées sur les retours des utilisateurs à chaque étape.
 
 132. Citer 3 méthodes Agiles dans le cadre d’un projet informatique
-    SCRUM
-    KANBAN
-    Extreme Programming (XP)
+    SCRUM : sprints de travail
+    KANBAN : méthode visuelle de la gestion du travail
+    Extreme Programming (XP) : mise en place du développement itératif (version fonctionnelle à chaque cycle),
+                             pair programming (2 dev : 1 dev - 1 pilote) et tests fréquents
 
 
 133. Qu’est-ce qu’une réunion de revue de projet ?
+    Réunion sur l'avancement du projet.
+
 134. Qu’est-ce qu’un livrable dans un projet ? 
+    Résultat de fin.
+
 135. Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
+    transparence : tout les processus sont visibles.
+    Inspection : Examen des progrès pour identifier les écarts ou problèmes potentiels.
+    Adaptation : Ajustement des processus.
+
 136. Qu’est-ce que le DevOps et quel est son objectif principal ?
+     Approche collaborative qui combine les équipes de développement (Dev) et des opérations (Ops) pour automatiser 
+     et optimiser le cycle de vie des logiciels.
+
+     Son objectif principal est d'améliorer la qualité, la rapidité et la fiabilité des livraisons de
+     logiciels en favorisant la communication, l'intégration continue, et le déploiement automatisé.
+
 137. Qu’est-ce que l’intégration continue ? 
+    Enregistrement de l'avancée du travail dans un dépôt partagé.
+
 138. Qu’est-ce que Docker ? Et en quoi est-il utile dans le cadre du DevOps ?
+    plateforme permettant de créer et exécuter des conteneurs qui garantissent la portabilité, la cohérence et 
+    l'efficacité des applications à travers différents environnements.
+
 139. Qu’est-ce qu’un test unitaire ? 
+    Permet de tester de manière isolée un bout de code.
+
 140. Quelle est l'unité de code testée lors d'un test unitaire ?
+    fonction - méthode ou composant individuel
+
 141. Quelles sont les caractéristiques d'un bon test unitaire ?
+    Indépendant : autonome
+    Rapide
+    Prédictible : résultat constant
+    Clair et précis
+    Isolée : abs d'interactions avec bdd ou syst ext
+    Automatisé
+
 142. Qu'est-ce qu'une assertion dans un test unitaire ?
+    Comparaison du résultat produit par une unité de code avec le résultat attendu.
+    Si çca correspond l'assertion a réussi.
  
 ## English
 1)	What does JavaScript enable you to do on a website ?
