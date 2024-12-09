@@ -338,10 +338,17 @@
 61.	Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
     Solution réutilisable à un problème courant dans le développement logiciel afin de résoudre plus facilement 
     un problème.
-    ex : singleton - factory method - Observer
+    Avantages : 
+        - respect des méthodes de conception
+        - dév + rapidement en suivant des modèles
+        - permet au code d'être relu plus facilement par autrui
+    ex : 
+    - composite : mep hiérarchie d'objet (architecture complexe: manip arbre, branches ou feuille)
+    - factory : creation familles d'objets sans préciser la classe return instance parmi plsuieurs possibles selon paramètres
+    - observer : relation 1 à +sieurs objets (enregistrement d'une activité > observation log, connexion etc)
     
 62.	Qu’est-ce que l’architecture MVC ?
-    Permet de séparer la logique d'une application en 3 blocs
+    Permet de séparer la logique d'une application en 3 blocs (logique métier, présentation, traitements)
 
 63.	Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
     Model : Gère les données, la logique métier et l'accès à la BDD
